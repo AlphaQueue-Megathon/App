@@ -86,10 +86,10 @@ class MapViewState extends State<MapView> {
   }
 
   void hardcodedData() {
-    BitmapDescriptor ctIcon =
-        BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue);
-    addMarker("Mushroom rock road CT", const LatLng(17.450483, 78.345961),
-        "Mushroom rock road CT", ctIcon);
+    // BitmapDescriptor ctIcon =
+    //     BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue);
+    // addMarker("Mushroom rock road CT", const LatLng(17.450483, 78.345961),
+    //     "Mushroom rock road CT", ctIcon);
   }
 
   static Future<Uint8List> getBytesFromAsset(String path, int width) async {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:round2/Incentives/TripHistory.dart';
+import 'package:round2/Incentives/Incentives.dart';
+import 'package:round2/Leaderboard/Leaderboard.dart';
 import 'package:round2/Map/MapView.dart';
 import 'package:round2/TripHistory/TripHistory.dart';
 
@@ -19,6 +20,7 @@ class HomePageState extends State<HomePage> {
     MapView(),
     TripHistory(),
     Incentives(),
+    Leaderboard()
   ];
 
   void _onItemTapped(int index) {
@@ -34,6 +36,7 @@ class HomePageState extends State<HomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
@@ -42,6 +45,10 @@ class HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'Trip History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.stars),
+            label: 'Quests',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.leaderboard),
