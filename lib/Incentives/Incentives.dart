@@ -105,13 +105,19 @@ class ImageDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      child: Container(
-        width: double.infinity,
-        height: 450,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: ExactAssetImage('assets/maps/1.jpeg'),
-                fit: BoxFit.contain)),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 450,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: ExactAssetImage('assets/maps/1.jpeg'),
+                    fit: BoxFit.contain)),
+          ),
+          TextButton(onPressed: () {}, child: const Text('Go!'))
+        ],
       ),
     );
   }
